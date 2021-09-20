@@ -1,4 +1,3 @@
-language: generic
 sudo: required
 services:
   - docker
@@ -7,4 +6,4 @@ services:
     - docker build -t ognjen02/frontend -f Dockerfile.dev .
 
   script:
-    - docker run -e CI=true ognjen02/frontend npm run test
+    - docker run ognjen02/frontend npm run test -- --coverage
